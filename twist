@@ -473,6 +473,7 @@ enabled = true
 filter  = sshd
 action  = iptables[name=SSH, port=ssh, protocol=tcp]
 logpath = /var/log/auth.log
+maxretry = 3
 
 [ssh-ddos]
 enabled = true
@@ -511,6 +512,7 @@ enabled = true
 filter  = apache-auth
 action  = hostsdeny
 logpath = /var/log/httpd/error_log
+#maxretry = 3
 
 [apache-badbots]
 enabled = true
